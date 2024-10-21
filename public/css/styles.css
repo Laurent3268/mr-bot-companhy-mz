@@ -1,0 +1,193 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+}
+
+.navbar-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #bb86fc;
+}
+
+.login-button button {
+    background-color: #bb86fc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #121212;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button button:hover {
+    background-color: #9a67ea;
+}
+
+.welcome-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.products-section {
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+}
+
+.products-section h2 {
+    color: #bb86fc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    background-color: #2c2c2c;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.product-info h3 {
+    margin: 0 0 10px 0;
+    color: #e0e0e0;
+}
+
+.product-info p {
+    margin: 5px 0;
+    color: #c5c5c5;
+}
+
+.product-info button {
+    background-color: #03dac5;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: #121212;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.product-info button:hover {
+    background-color: #02c7b8;
+}
+
+.whatsapp-contact {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.whatsapp-contact a {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-contact a:hover {
+    background-color: #20b955;
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.ad-section {
+    background-color: #121212;
+    text-align: center;
+    padding: 30px;
+    margin: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.ad-section h2 {
+    color: #fff4f4;
+    margin-bottom: 15px;
+}
+
+.ad-section p {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.ad-section button {
+    background-color: #f44336;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ad-section button:hover {
+    background-color: #d32f2f;
+}
+
+
+.carousel {
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}

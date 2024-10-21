@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Administração de Imagens</title>
+</head>
+<body>
+    <h1>Gerenciar Imagens de Propaganda</h1>
+
+    <form action="/admin/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Upload de Imagem</button>
+    </form>
+
+    <div class="gallery">
+        <% imagens.forEach(function(imagem, index) { %>
+            <div class="image-card">
+                <img src="<%= imagem.path %>" alt="Ad Image">
+                <form action="/admin/delete/<%= index %>" method="POST">
+                    <button type="submit">Excluir</button>
+                </form>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

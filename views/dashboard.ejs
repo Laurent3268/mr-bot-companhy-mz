@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo (1).png" alt="Logo" class="navbar-icon">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#precos">Preços</a></li>
+            <li><a href="#teste-gratis">Teste Grátis</a></li>
+        </ul>
+        <div class="login-button">
+            <button onclick="location.href='https://contate.me/mr-bot'">Suporte</button>
+        </div>
+    </nav>
+
+    <div class="welcome-container">
+        <h1>MR BOT COMPANHY</h1>
+        <p>Bem-vindo ao seu dashboard!</p>
+    </div>
+
+    <!-- Seção de Produtos -->
+    <section id="produtos" class="products-section">
+        <h2>Produtos</h2>
+        <div class="product-card">
+            <img src="/images/FREE.png" alt="Bot Gratuito" class="product-image">
+            <div class="product-info">
+                <h3>Bot Gratuito</h3>
+                <p>Este é um bot incrível que você pode usar gratuitamente.</p>
+                <button onclick="location.href='https://revolution-aviator-mz.vercel.app/bet/test-page.html'">Acesse o Bot</button>
+                <p>Preço: MT 0</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/aviator.jpg" alt="Bot Aviator" class="product-image">
+            <div class="product-info">
+                <h3>Bot Aviator</h3>
+                <p>Este bot premium oferece funcionalidades avançadas.</p>
+                <button onclick="location.href='https://contate.me/mr-bot'">Comprar o Bot</button>
+                <p>Preço: MT 500/Semanal</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/navigator.png" alt="Bot Navigator" class="product-image">
+            <div class="product-info">
+                <h3>Bot Navigator</h3>
+                <p>Navegue com precisão através deste bot inovador.</p>
+                <button onclick="location.href='https://contate.me/mr-bot'">Comprar o Bot</button>
+                <p>Preço: MT 300/Vitalício</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/swimi.jpg" alt="Bot Swimigator" class="product-image">
+            <div class="product-info">
+                <h3>Bot Swimigator</h3>
+                <p>Mestre na arte da navegação aquática, ideal para suas aventuras.</p>
+                <button onclick="location.href='https://contate.me/mr-bot'">Comprar o bot</button>
+                <p>Preço: MT 300/Vitalício</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/jetxx.jpg" alt="Bot JetX" class="product-image">
+            <div class="product-info">
+                <h3>Bot JetX</h3>
+                <p>Velocidade e eficiência definem o JetX, seu companheiro veloz.</p>
+                <button onclick="location.href='https://contate.me/mr-bot'">Comprar o bot</button>
+                <p>Preço: MT 250/Vitalício</p>
+            </div>
+        </div>
+    </section>
+    <!-- Seção de Propaganda -->
+    <section class="ad-section">
+        <h2>Descubra a Melhor Casa de Apostas em Moçambique!</h2>
+        <p>Conquiste suas vitórias com apostas seguras e emocionantes na plataforma mais confiável.</p>
+        <button onclick="window.open('https://media1.placard.co.mz/redirect.aspx?pid=6998&bid=1712', '_blank')">Acesse Agora</button>
+
+        <!-- Carrossel de Imagens -->
+        <div class="carousel">
+            <div class="carousel-images">
+                <% imagens.forEach(function(imagem) { %>
+                    <img src="<%= imagem %>" alt="Ad Image">
+                <% }) %>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('visible');
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].classList.add('visible');
+
+            document.querySelector('.carousel-images').style.transform =
+                `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(showNextImage, 3000); // Muda a imagem a cada 3 segundos
+    </script>
+
+    <script>
+        // Verifica se é um reload
+        if (performance.navigation.type === 1) {
+            // Se for um reload, redireciona para a tela de boas-vindas
+            window.location.href = '/';
+        } else {
+            // Define uma flag de primeira visita
+            localStorage.setItem('visited', 'true');
+        }
+    </script>
+</body>
+</html>
