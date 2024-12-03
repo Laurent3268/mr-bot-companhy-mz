@@ -4,7 +4,7 @@ const multer = require('multer');
 const fs = require('fs');
 const app = express();
 const port = 3000;
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8939065923961050" crossorigin="anonymous"></script>
+
 // Configurar o EJS como o motor de visualização
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
